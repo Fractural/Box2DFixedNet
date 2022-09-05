@@ -120,7 +120,7 @@ namespace Box2DX.Collision
             {
                 //Completely dry
                 c = new Vec2();
-                return 0;
+                return Fix64.Zero;
             }
             if (l > _radius)
             {
@@ -132,7 +132,7 @@ namespace Box2DX.Collision
             //Magic
             Fix64 r2 = _radius * _radius;
             Fix64 l2 = l * l;
-            Fix64 area = r2 * ((Fix64)System.Math.Asin(l / _radius) + Box2DX.Common.Settings.Pi / 2) +
+            Fix64 area = r2 * Fix64.Acos(Fix64.Asin(l / _radius) + Box2DX.Common.Settings.Pi / Fix64.Two) +
                 l * Box2DX.Common.Math.Sqrt(r2 - l2);
             Fix64 com = -Fix64.Two / Fix64.Three * Fix64.Pow(r2 - l2, Fix64.OneAndHalf) / area;
 

@@ -420,11 +420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.WindowTests\\Box2D.WindowTests.csproj",
+      "projectUniqueName": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Window\\Box2D.WindowTests\\Box2D.WindowTests.csproj",
       "projectName": "Box2D.WindowTests",
-      "projectPath": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.WindowTests\\Box2D.WindowTests.csproj",
+      "projectPath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Window\\Box2D.WindowTests\\Box2D.WindowTests.csproj",
       "packagesPath": "C:\\Users\\Alan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.WindowTests\\obj\\",
+      "outputPath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Window\\Box2D.WindowTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

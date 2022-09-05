@@ -1,0 +1,6 @@
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\FixedMath\bin\Debug\FixMath.NET.dll
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\FixedMath\bin\Debug\FixMath.NET.pdb
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\FixedMath\obj\Debug\FixedMath.NET.csproj.AssemblyReference.cache
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\FixedMath\obj\Debug\FixedMath.NET.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\FixedMath\obj\Debug\FixMath.NET.dll
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\FixedMath\obj\Debug\FixMath.NET.pdb

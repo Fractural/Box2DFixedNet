@@ -13,7 +13,10 @@
     <Version>1.0.4</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Box2D.NetStandard" Version="1.0.3" />
     <PackageReference Include="OpenTK.NetStandard" Version="1.0.5.22" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Box2D\Box2D.NetStandard.csproj" />
+    <ProjectReference Include="..\..\..\FixedMath\FixedMath.NET.csproj" />
   </ItemGroup>
 </Project>

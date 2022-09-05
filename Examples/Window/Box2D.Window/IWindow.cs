@@ -3,6 +3,7 @@
 */
 
 using Box2DX.Common;
+using FixMath.NET;
 using Color = Box2DX.Dynamics.Color;
 
 namespace Box2D.Window
@@ -13,9 +14,9 @@ namespace Box2D.Window
 
         void DrawSolidPolygon(Vec2[] vertices, int vertexCount, Color color);
 
-        void DrawCircle(Vec2 center, float radius, Color color);
+        void DrawCircle(Vec2 center, Fix64 radius, Color color);
 
-        void DrawSolidCircle(Vec2 center, float radius, Vec2 axis, Color color);
+        void DrawSolidCircle(Vec2 center, Fix64 radius, Vec2 axis, Color color);
 
         void DrawSegment(Vec2 p1, Vec2 p2, Color color);
 

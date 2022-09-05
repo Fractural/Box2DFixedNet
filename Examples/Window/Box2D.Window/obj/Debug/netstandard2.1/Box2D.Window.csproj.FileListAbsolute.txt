@@ -1,0 +1,5 @@
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\Examples\Window\Box2D.Window\obj\Debug\netstandard2.1\Box2D.Window.csproj.AssemblyReference.cache
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\Examples\Window\Box2D.Window\obj\Debug\netstandard2.1\Box2D.Window.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\Examples\Window\Box2D.Window\obj\Debug\netstandard2.1\Box2D.Window.AssemblyInfoInputs.cache
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\Examples\Window\Box2D.Window\obj\Debug\netstandard2.1\Box2D.Window.AssemblyInfo.cs
+C:\Users\Alan\Desktop\Open_Source\Box2DFixedNet\Examples\Window\Box2D.Window\obj\Debug\netstandard2.1\Box2D.Window.csproj.CoreCompileInputs.cache

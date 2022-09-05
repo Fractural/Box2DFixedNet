@@ -2,14 +2,14 @@
  * Window Simulation Copyright © Ben Ukhanov 2021
  */
 
+using Box2DX.Common;
+using FixMath.NET;
+using OpenTK;
+using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
+using OpenTK.Input;
 using System;
 using System.Collections.Concurrent;
-using Box2DX.Common;
-using OpenTK;
-using OpenTK.Graphics.OpenGL;
-using OpenTK.Graphics;
-using OpenTK.Input;
-using Math = System.Math;
 using Color = Box2DX.Dynamics.Color;
 
 namespace Box2D.Window
@@ -161,14 +161,14 @@ namespace Box2D.Window
         {
             drawActions.Enqueue(() =>
             {
-                GL.Color4(color.R, color.G, color.B, 0.5f);
+                GL.Color4((float)color.R, (float)color.G, (float)color.B, 0.5f);
                 GL.Begin(PrimitiveType.LineLoop);
 
                 for (var i = 0; i < vertexCount; i++)
                 {
                     var vertex = vertices[i];
 
-                    GL.Vertex2(vertex.X, vertex.Y);
+                    GL.Vertex2((double)vertex.X, (double)vertex.Y);
                 }
 
                 GL.End();
@@ -179,41 +179,41 @@ namespace Box2D.Window
         {
             drawActions.Enqueue(() =>
             {
-                GL.Color4(color.R, color.G, color.B, 0.5f);
+                GL.Color4((float)color.R, (float)color.G, (float)color.B, 0.5f);
                 GL.Begin(PrimitiveType.TriangleFan);
 
                 for (var i = 0; i < vertexCount; i++)
                 {
                     var vertex = vertices[i];
 
-                    GL.Vertex2(vertex.X, vertex.Y);
+                    GL.Vertex2((double)vertex.X, (double)vertex.Y);
                 }
 
                 GL.End();
             });
         }
 
-        public void DrawCircle(Vec2 center, float radius, Color color)
+        public void DrawCircle(Vec2 center, Fix64 radius, Color color)
         {
             drawActions.Enqueue(() =>
             {
-                const float kSegments = 16.0f;
+                int kSegments = 16;
                 const int VertexCount = 16;
 
-                var kIncrement = 2.0f * Settings.Pi / kSegments;
-                var theta = 0.0f;
+                var kIncrement = Fix64.Two * Settings.Pi / (Fix64)kSegments;
+                var theta = Fix64.Zero;
 
-                GL.Color4(color.R, color.G, color.B, 0.5f);
+                GL.Color4((float)color.R, (float)color.G, (float)color.B, 0.5f);
                 GL.Begin(PrimitiveType.LineLoop);
                 GL.VertexPointer(VertexCount * 2, VertexPointerType.Float, 0, IntPtr.Zero);
 
                 for (var i = 0; i < kSegments; ++i)
                 {
-                    var x = (float)Math.Cos(theta);
-                    var y = (float)Math.Sin(theta);
+                    var x = Fix64.Cos(theta);
+                    var y = Fix64.Sin(theta);
                     var vertex = center + (radius * new Vec2(x, y));
 
-                    GL.Vertex2(vertex.X, vertex.Y);
+                    GL.Vertex2((double)vertex.X, (double)vertex.Y);
 
                     theta += kIncrement;
                 }
@@ -222,27 +222,27 @@ namespace Box2D.Window
             });
         }
 
-        public void DrawSolidCircle(Vec2 center, float radius, Vec2 axis, Color color)
+        public void DrawSolidCircle(Vec2 center, Fix64 radius, Vec2 axis, Color color)
         {
             drawActions.Enqueue(() =>
             {
-                const float kSegments = 16.0f;
+                const int kSegments = 16;
                 const int VertexCount = 16;
 
-                var kIncrement = 2.0f * Settings.Pi / kSegments;
-                var theta = 0.0f;
+                var kIncrement = Fix64.Two * Settings.Pi / (Fix64)kSegments;
+                var theta = Fix64.Zero;
 
-                GL.Color4(color.R, color.G, color.B, 0.5f);
+                GL.Color4((float)color.R, (float)color.G, (float)color.B, 0.5f);
                 GL.Begin(PrimitiveType.TriangleFan);
                 GL.VertexPointer(VertexCount * 2, VertexPointerType.Float, 0, IntPtr.Zero);
 
                 for (var i = 0; i < kSegments; ++i)
                 {
-                    var x = (float)Math.Cos(theta);
-                    var y = (float)Math.Sin(theta);
+                    var x = Fix64.Cos(theta);
+                    var y = Fix64.Sin(theta);
                     var vertex = center + (radius * new Vec2(x, y));
 
-                    GL.Vertex2(vertex.X, vertex.Y);
+                    GL.Vertex2((double)vertex.X, (double)vertex.Y);
 
                     theta += kIncrement;
                 }
@@ -257,35 +257,36 @@ namespace Box2D.Window
         {
             drawActions.Enqueue(() =>
             {
-                GL.Color4(color.R, color.G, color.B, 1);
+                GL.Color4((float)color.R, (float)color.G, (float)color.B, 1);
                 GL.Begin(PrimitiveType.Lines);
-                GL.Vertex2(p1.X, p1.Y);
-                GL.Vertex2(p2.X, p2.Y);
+                GL.Vertex2((double)p1.X, (double)p1.Y);
+                GL.Vertex2((double)p2.X, (double)p2.Y);
                 GL.End();
             });
         }
+
+        private static readonly Fix64 kAxisScale = Fix64.From("0.4");
 
         public void DrawXForm(XForm xf)
         {
             drawActions.Enqueue(() =>
             {
-                const float kAxisScale = 0.4f;
 
                 var a = xf.Position;
 
                 GL.Begin(PrimitiveType.Lines);
                 GL.Color3(1.0f, 0.0f, 0.0f);
-                GL.Vertex2(a.X, a.Y);
+                GL.Vertex2((double)a.X, (double)a.Y);
 
                 var b = a + (kAxisScale * xf.R.Col1);
 
-                GL.Vertex2(b.X, b.Y);
+                GL.Vertex2((double)b.X, (double)b.Y);
                 GL.Color3(0.0f, 1.0f, 0.0f);
-                GL.Vertex2(a.X, a.Y);
+                GL.Vertex2((double)a.X, (double)a.Y);
 
                 b = a + (kAxisScale * xf.R.Col2);
 
-                GL.Vertex2(b.X, b.Y);
+                GL.Vertex2((double)b.X, (double)b.Y);
                 GL.End();
             });
         }

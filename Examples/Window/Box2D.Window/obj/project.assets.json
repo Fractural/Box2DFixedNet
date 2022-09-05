@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "Box2D.NetStandard/1.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/Box2D.NetStandard.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Box2D.NetStandard.dll": {}
-        }
-      },
       "Microsoft.Win32.Registry/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -131,22 +122,32 @@
             "rid": "win"
           }
         }
+      },
+      "Box2D.NetStandard/1.0.4": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "FixedMath.NET": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Box2D.NetStandard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Box2D.NetStandard.dll": {}
+        }
+      },
+      "FixedMath.NET/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/FixedMath.NET.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FixedMath.NET.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Box2D.NetStandard/1.0.3": {
-      "sha512": "9sn1QiSQ8JULMs0qHAE9RIesp2Vkqe9gA/rmw8xxzumZsmvm8qytnScUozuF7enXjjskkFqTUtLDqhtTxbyAEw==",
-      "type": "package",
-      "path": "box2d.netstandard/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "box2d.netstandard.1.0.3.nupkg.sha512",
-        "box2d.netstandard.nuspec",
-        "lib/netstandard2.1/Box2D.NetStandard.dll"
-      ]
-    },
     "Microsoft.Win32.Registry/4.7.0": {
       "sha512": "KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "type": "package",
@@ -457,11 +458,22 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Box2D.NetStandard/1.0.4": {
+      "type": "project",
+      "path": "../../../Box2D/Box2D.NetStandard.csproj",
+      "msbuildProject": "../../../Box2D/Box2D.NetStandard.csproj"
+    },
+    "FixedMath.NET/1.0.0": {
+      "type": "project",
+      "path": "../../../FixedMath/FixedMath.NET.csproj",
+      "msbuildProject": "../../../FixedMath/FixedMath.NET.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Box2D.NetStandard >= 1.0.3",
+      "Box2D.NetStandard >= 1.0.4",
+      "FixedMath.NET >= 1.0.0",
       "OpenTK.NetStandard >= 1.0.5.22"
     ]
   },
@@ -473,11 +485,11 @@
   "project": {
     "version": "1.0.4",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.Window\\Box2D.Window.csproj",
+      "projectUniqueName": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Window\\Box2D.Window\\Box2D.Window.csproj",
       "projectName": "Box2D.Window",
-      "projectPath": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.Window\\Box2D.Window.csproj",
+      "projectPath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Window\\Box2D.Window\\Box2D.Window.csproj",
       "packagesPath": "C:\\Users\\Alan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.Window\\obj\\",
+      "outputPath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Window\\Box2D.Window\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -500,7 +512,14 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Box2D\\Box2D.NetStandard.csproj": {
+              "projectPath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Box2D\\Box2D.NetStandard.csproj"
+            },
+            "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\FixedMath\\FixedMath.NET.csproj": {
+              "projectPath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\FixedMath\\FixedMath.NET.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -513,10 +532,6 @@
       "netstandard2.1": {
         "targetAlias": "netstandard2.1",
         "dependencies": {
-          "Box2D.NetStandard": {
-            "target": "Package",
-            "version": "[1.0.3, )"
-          },
           "OpenTK.NetStandard": {
             "target": "Package",
             "version": "[1.0.5.22, )"
