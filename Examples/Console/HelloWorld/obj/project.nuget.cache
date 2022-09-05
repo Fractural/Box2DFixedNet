@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UPnqW1Ug1uuR1E30csLohQIR8jGPoCdiJJ0IeahglstERttCTO9DIvmTa0Wp01S+4z1IbXNyLyl8or4+Botg2Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alan\\Desktop\\Open_Source\\Box2DFixedNet\\Examples\\Console\\HelloWorld\\HelloWorld.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alan\\.nuget\\packages\\box2d.netstandard\\1.0.3\\box2d.netstandard.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

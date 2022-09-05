@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "6ommIeQZPdCIkFMIiltCU6iJlfClP8wiFFGfI+QJVvm8lW1xuUOLaPAPC3cMCJG+lGXIGihQ/Im/UKJqZigYmA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alan\\Downloads\\box2d-netstandard-1.0.4\\box2d-netstandard-1.0.4\\examples\\window\\Box2D.WindowTests\\Box2D.WindowTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alan\\.nuget\\packages\\box2d.netstandard\\1.0.3\\box2d.netstandard.1.0.3.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\box2d.window\\1.0.4\\box2d.window.1.0.4.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\opentk.netstandard\\1.0.5.22\\opentk.netstandard.1.0.5.22.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Alan\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

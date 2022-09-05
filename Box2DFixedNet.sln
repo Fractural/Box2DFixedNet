@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Box2D.NetStandard", "Box2D\Box2D.NetStandard.csproj", "{D2753BC5-C069-4C89-8B68-AD510D6C7E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedMath.NET", "FixedMath\FixedMath.NET.csproj", "{D46C606E-5826-465F-9983-251E3D3B2F1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2753BC5-C069-4C89-8B68-AD510D6C7E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2753BC5-C069-4C89-8B68-AD510D6C7E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2753BC5-C069-4C89-8B68-AD510D6C7E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2753BC5-C069-4C89-8B68-AD510D6C7E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46C606E-5826-465F-9983-251E3D3B2F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46C606E-5826-465F-9983-251E3D3B2F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46C606E-5826-465F-9983-251E3D3B2F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46C606E-5826-465F-9983-251E3D3B2F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FAB0DC2-2843-4E85-BE61-A4C09CD98DA7}
+	EndGlobalSection
+EndGlobal

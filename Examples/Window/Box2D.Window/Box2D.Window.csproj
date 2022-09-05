@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Ben Ukhanov</Authors>
+    <Copyright>Copyright © Ben Ukhanov 2021</Copyright>
+    <PackageTags>Box2D, OpenTK</PackageTags>
+    <Description>The Box2D window physics simulation.</Description>
+    <PackageProjectUrl>https://github.com/benukhanov/box2d-netstandard/tree/v1.0.4/examples/window</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <FileVersion>1.0.4.0</FileVersion>
+    <Version>1.0.4</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Box2D.NetStandard" Version="1.0.3" />
+    <PackageReference Include="OpenTK.NetStandard" Version="1.0.5.22" />
+  </ItemGroup>
+</Project>
