@@ -4,6 +4,8 @@
 
 Fixed-point Box2D library in C#. It combines the [FixedMath.Net](https://github.com/asik/FixedMath.Net) repo with codingben (Ben Ukhanov)'s [box2D-netstandard](https://github.com/codingben/box2d-netstandard).
 
+Box2D might not be the best option For deterministic rollback, because some features may prevent easy loading and unloading of state. See [Rollback Networking in Dragon Saddle Melee](https://www.maintanksoftware.com/article/rollback3.html).
+
 ## Source
 
 - [Ported C# Box2DX - Ihar Kalasouski](https://code.google.com/archive/p/box2dx/)
