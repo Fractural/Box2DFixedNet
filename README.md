@@ -1,6 +1,8 @@
 ![Box2D Logo](https://box2d.org/images/logo.svg)
 
-# Box2D Fixed.NET 
+# Box2D Fixed.NET
+
+## ⚠️ WIP & Incomplete ⚠️
 
 Fixed-point Box2D library in C#. It combines the [FixedMath.Net](https://github.com/asik/FixedMath.Net) repo with codingben (Ben Ukhanov)'s [box2D-netstandard](https://github.com/codingben/box2d-netstandard).
 
